@@ -162,8 +162,20 @@ body {
 /* ============================== MAIN ============================== */
 
 .hero {
-  background-color: var(--main-color);
+  margin-right: auto;
+  margin-left: auto;
+
+  background-color: rgba(46, 47, 66, 0.7);
   text-align: center;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero/hero-background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  max-width: 1440px;
 }
 
 .hero-title {
@@ -236,6 +248,24 @@ body {
   color: var(--secondary-color);
 }
 
+.features-icon-thumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4fd;
+  /* width: 264px;
+  height: 112px; */
+  padding: 24px 100px;
+  border-radius: 4px;
+
+  margin-bottom: 8px;
+}
+
+.features-icon {
+  width: 64px;
+  height: 64px;
+}
+
 .work {
   padding-top: 120px;
   padding-bottom: 120px;
@@ -295,12 +325,83 @@ body {
 }
 
 .team-list-item-text {
+  margin-bottom: 8px;
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
   color: var(--secondary-color);
 }
+
+.team-list-icon {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-icon {
+  width: 16px;
+  height: 16px;
+  fill: #f4f4fd;
+}
+
+.team-icon-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4d5ae5;
+}
+
+.team-icon-link:hover,
+.team-icon-link:focus {
+  background-color: #404bbf;
+}
+
+.customers {
+  padding-top: 130px;
+  padding-bottom: 120px;
+}
+
+.customers-title {
+  margin-bottom: 72px;
+}
+
+.customers-list {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.customers-link {
+  flex-basis: calc((100% - 5 * 24px) / 6);
+  display: flex;
+  width: 168px;
+  height: 88px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+}
+
+.customers-link:hover,
+.customers-link:focus {
+  border-color: #404bbf;
+}
+
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+  fill: #404bbf;
+}
+
+.customers-icon {
+  width: 104px;
+  height: 56px;
+  fill: #8e8f99;
+}
+
 /* ============================== /MAIN ============================== */
 
 /* ============================== FOOTER ============================== */
@@ -321,6 +422,48 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #e7e9fc;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-info {
+  margin-right: 120px;
+}
+
+.soc-text {
+  margin-bottom: 16px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.footer-soc-list {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-soc-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-soc-link:hover,
+.footer-soc-link:focus {
+  background-color: #31d0aa;
+}
+
+.footer-soc-icon {
+  width: 24px;
+  height: 24px;
+  fill: #f4f4fd;
 }
 /* ============================== /FOOTER ============================== */
 
@@ -349,8 +492,6 @@ body {
 .portfolio-menu-btn {
   padding: 12px 24px;
 
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
   border: 1px solid #e7e9fc;
   border-radius: 4px;
 
@@ -370,7 +511,10 @@ body {
 .portfolio-menu-btn:hover,
 .portfolio-menu-btn:focus {
   color: #ffffff;
+  border-color: var(--accent-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -392,6 +536,11 @@ body {
   border-bottom: 1px solid #e7e9fc;
   border-right: 1px solid #e7e9fc;
   border-left: 1px solid #e7e9fc;
+}
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-list-item-title {
